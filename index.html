@@ -3,9 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login & Application</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
 <body>
-    
+    <section>
+        <div class="login-box" id="loginBox">
+            <form action="">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-unread-outline"></ion-icon>  
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="key-outline"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit">Login</button>
+                <div class="register-link">
+                    <p>Direct <a href="#" id="showApplication">Apply Now</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <div class="sign-in-box" id="applicationBox" style="display: none;">
+            <form id="applicationForm">
+                <h2>Application Form</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" name="firstName" required>
+                    <label>First Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" name="lastName" required>
+                    <label>Last Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-unread-outline"></ion-icon>
+                    </span>
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+
+               
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </span>
+                    <input type="text" name="applicationDate" id="applicationDate" required>
+                    <label>Application Date</label>
+                </div>
+
+                <div class="input-box">
+                    <select name="countryCode" id="countryCode" required>
+                        <option value="">Select Country</option>
+                    </select>
+                    <div class="select-arrow">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <label></label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </span>
+                    <input type="text" name="phone" id="phone" required>
+                    <label></label>
+                </div>
+
+                <div class="input-box">
+                    <select name="position" required>
+                        <option value="">Select Position</option>
+                        <option>Frontend Developer</option>
+                        <option>Backend Developer</option>
+                        <option>Full Stack Developer</option>
+                    </select>
+                    <div class="select-arrow">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                    <label></label>
+                </div>
+
+                <div id="successMessage" style="display:none;color:#00ff00;text-align:center;margin:15px 0;">
+                    Application submitted successfully!
+                </div>
+                <button type="submit">Submit</button>
+                <div class="register-link">
+                    <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="app.js">
+   
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
